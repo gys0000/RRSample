@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.example.gystr.net.PlanBean.DataBean" />
+
+        <variable
+            name="planData"
+            type="com.example.gystr.net.PlanBean.DataBean" />
+
+        <variable
+            name="adapter"
+            type="com.example.gystr.net.CommonAdapter&lt;DataBean&gt;" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SampleNetRRActivity">
+
+        <Button
+            android:id="@+id/btn_click"
+            android:layout_width="110dp"
+            android:layout_height="45dp"
+            android:text="点击" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_click"
+            android:text="@={planData.planName}"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.RecyclerView
+            linear="@{1}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adapter="@{adapter}"
+            android:layout_below="@id/btn_click"/>
+    </RelativeLayout>
+</layout>

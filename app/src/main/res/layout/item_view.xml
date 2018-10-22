@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.example.gystr.net.PlanBean.DataBean" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal">
+
+        <!--<ImageView-->
+            <!--android:layout_width="200dp"-->
+            <!--android:layout_height="200dp"-->
+            <!--android:onClick="@={user.planImg}"-->
+            <!--app:imgUrl="@{user.planImg}" /> -->
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:imgUrl="@{user.planImg}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={user.planName}"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+</layout>
