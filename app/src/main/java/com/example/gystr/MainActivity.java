@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void btnClick() {
+    public void btn1Click() {
         //被观察者
 //        novel = Observable.create(new ObservableOnSubscribe<String>() {
 //            @Override
@@ -83,6 +83,27 @@ public class MainActivity extends AppCompatActivity {
 //        onChained();
 
         startActivity(new Intent(this, SampleNetRRActivity.class));
+    }
+    public void btn2Click() {
+        //被观察者
+//        novel = Observable.create(new ObservableOnSubscribe<String>() {
+//            @Override
+//            public void subscribe(ObservableEmitter<String> emitter) throws Exception {
+//                emitter.onNext("连载1");
+//                emitter.onNext("连载2");
+//                emitter.onNext("连载3");
+//                emitter.onComplete();
+//            }
+//        });
+//        onObServer();
+//        if (reader != null) {
+//        novel.subscribe(reader);
+//        }
+
+//        onChained();
+
+//        startActivity(new Intent(this, SampleNetRRActivity.class));
+        startActivity(new Intent(this, NestedActivity.class));
     }
 
     private void onChained() {

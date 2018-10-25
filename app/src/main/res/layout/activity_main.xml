@@ -19,8 +19,13 @@
         <Button
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:text="点击"
-            android:onClick="@{()->click.btnClick()}"/>
+            android:text="点击->SampleNetRRActivity"
+            android:onClick="@{()->click.btn1Click()}"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="点击->SampleNetRRActivity"
+            android:onClick="@{()->click.btn2Click()}"/>
 
         <TextView
             android:layout_width="wrap_content"

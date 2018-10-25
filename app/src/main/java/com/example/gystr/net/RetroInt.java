@@ -21,7 +21,7 @@ public class RetroInt {
 
     private static final int DEFAULT_TIMEOUT = 10000;
 
-    public static Retrofit getDefault() {
+    public static Api getDefault() {
 
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         builder.connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS);
@@ -31,7 +31,7 @@ public class RetroInt {
             public Response intercept(Chain chain) throws IOException {
                 Request request = chain.request();
                 Response proceed = chain.proceed(request);
-                return proceed.newBuilder().header("Authorization", "Bearer 0013975ca39b4657a55729eb3fa149cd").build();
+                return proceed.newBuilder().header("Authorization", "Bearer 4ce288014b87fcdb155c8e3f5d03f34e").build();
             }
         });
 
@@ -40,7 +40,7 @@ public class RetroInt {
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .baseUrl(Api.HTTP_TOOT_URL)
-                .build();
+                .build().create(Api.class);
     }
 
 }
