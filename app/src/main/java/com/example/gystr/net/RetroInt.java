@@ -1,8 +1,5 @@
 package com.example.gystr.net;
 
-import com.example.rr.RetroInit;
-import com.example.rr.Url;
-
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 

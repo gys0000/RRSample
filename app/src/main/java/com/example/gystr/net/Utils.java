@@ -9,7 +9,6 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.widget.ImageView;
 
 import com.example.gystr.R;
-import com.example.rr.GlideHelper;
 
 public class Utils {
     /**

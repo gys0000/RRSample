@@ -1,9 +1,13 @@
-package com.example.rr;
+package com.example.rr.exception;
 
-public class HttpResult<T> {
+public class APIException extends RuntimeException {
     private int code;
     private String message;
-    private T data;
+
+    public APIException(String message, Throwable cause, int code, String message1) {
+        this.code = code;
+        this.message = message1;
+    }
 
     public int getCode() {
         return code;
@@ -13,19 +17,12 @@ public class HttpResult<T> {
         this.code = code;
     }
 
+    @Override
     public String getMessage() {
         return message;
     }
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
     }
 }
