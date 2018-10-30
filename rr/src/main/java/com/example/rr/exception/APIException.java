@@ -4,7 +4,7 @@ public class APIException extends RuntimeException {
     private int code;
     private String message;
 
-    public APIException(String message, Throwable cause, int code, String message1) {
+    public APIException( int code, String message1) {
         this.code = code;
         this.message = message1;
     }
